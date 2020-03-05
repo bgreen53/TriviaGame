@@ -38,7 +38,7 @@ $("#accept").on("click", function(){
 
     $("#accept").hide()
     $("#q1").html("<p>1. What musical instrument does Ted steal for Robin multiple times?</p>")
-    $("#a1").html("<input type='radio'>Blue French Horn</input><input type='radio'>Red Flute</input><input type='radio'>Golden Drums</input><input type='radio'>Yellow Clarinet</input>")
+    $("#a1").html("<input type='radio' class= 'r1'>Blue French Horn</input><input type='radio' class= 'r1'>Red Flute</input><input type='radio' class= 'r1'>Golden Drums</input><input type='radio' class= 'r1'>Yellow Clarinet</input>")
     $("#q2").html("<p>2. Marshall grew up in Which Minnesota town?</p>")
     $("#a2").html("<input type='radio'>Blue French Horn</input><input type='radio'>Red Flute</input><input type='radio'>Golden Drums</input><input type='radio'>Yellow Clarinet</input>")
     $("#q3").html("<p>3. Who was Lily's high school boyfriend?</p>")
@@ -59,13 +59,18 @@ $("#accept").on("click", function(){
     $("#a10").html("<input type='radio'>Blue French Horn</input><input type='radio'>Red Flute</input><input type='radio'>Golden Drums</input><input type='radio'>Yellow Clarinet</input>")
 
     countdown()
+
+    $(".r1").click(function() {
+        $(".r1").not(this).prop('checked', false);
+    //repeat for each answer line
+    
+    
+    });
 });
 
-$('input:radio').click(function() {
-    $('input:radio').not(this).prop('checked', false);
+//create funtion to count each correct, incorrect and unanswered question
+//return above data once time is up
 
-
-});
 
 
 
